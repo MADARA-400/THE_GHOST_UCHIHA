@@ -1,7 +1,8 @@
-import BD
-
-if __name__ == "__main__":
-    try:
-        BD.main() 
-    except AttributeError:
-        pass 
+import platform,os
+#####
+os.system("git pull")
+bit = platform.architecture()[0]
+if bit == '64bit':
+    import BD
+elif bit == '32bit':
+    print("SORRY BRO")
